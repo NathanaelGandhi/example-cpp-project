@@ -21,6 +21,7 @@ target_include_directories(${PROJECT_NAME} PUBLIC
 
 # Libraries
 set(PROJECT_LIBS
+    "logger"
 )
 foreach(LIB ${PROJECT_LIBS})
     # Add library dependencies
