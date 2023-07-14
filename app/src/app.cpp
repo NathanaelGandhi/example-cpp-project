@@ -1,10 +1,15 @@
 #include <stdio.h>
 
-#include <iostream>
+#include "logger.hpp"
 
 int main() {
-    printf("printf: Hello, World!\n");
-    std::cout << "cout: Hello World!\n";
+    printf("Starting from line: %d in %s\n", __LINE__, __FILE__);
+
+    Logger::Log(LogLevel::TRACE, "Testing the logger");
+    Logger::Log(LogLevel::DEBUG, "Testing the logger");
+    LOG_WARN("Testing the logger");
+    Logger::Log(LogLevel::ERROR, "Testing the logger");
+    LOG_FATAL("Testing the logger");
 
     return 0;
 }
